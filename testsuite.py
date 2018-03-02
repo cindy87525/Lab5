@@ -11,11 +11,11 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(17,GPIO.OUT)
 while True:
 	t = 0
-	for t in range(0, 5):
-		time.sleep(0.5)
-		GPIO.output(17,1)
-		time.sleep(0.5)
-		GPIO.output(17,0)
+	for t in range(0, 5): #Blink the LED 5 times with on/off intervals of 500ms
+		time.sleep(0.5) #interval of 0.5 sec
+		GPIO.output(17,1) #turn on
+		time.sleep(0.5) #interval of 0.5 sec
+		GPIO.output(17,0) #turn off
 		t = t + 1
 	print("LED sensor:")
 	for x in range(0, 50):
@@ -26,6 +26,7 @@ while True:
 		else:
 			print("dark")
 		time.sleep(0.1)
+		x = x + 1
 
 	y = 0
 
