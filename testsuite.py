@@ -18,7 +18,7 @@ while True:
 		GPIO.output(17,0)
 		t = t + 1
 	print("LED sensor:")
-	for x in range(0, 5):
+	for x in range(0, 50):
 		values = mcp.read_adc(0)
 		print(values)
 		if values > 400:
